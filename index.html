@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Krishnapriya ❤️</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden}
+body{
+  font-family:Georgia,"Times New Roman",serif;
+  background:#08070b;color:#fff;
+}
+canvas{position:fixed;inset:0;width:100%;height:100%;z-index:0}
+.overlay{
+  position:fixed;inset:0;z-index:1;
+  background:radial-gradient(circle at center,rgba(95,20,50,.28),transparent 48%),
+             linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.72));
+}
+main{
+  position:relative;z-index:2;height:100%;display:flex;
+  align-items:center;justify-content:center;text-align:center;padding:24px;
+}
+.screen{display:none;max-width:760px;width:100%;animation:fade .9s ease}
+.screen.active{display:block}
+.kicker{font:12px Arial,sans-serif;letter-spacing:5px;text-transform:uppercase;color:#eab7c9;margin-bottom:22px}
+h1{font-size:clamp(42px,11vw,92px);line-height:.95;margin:0 0 24px;font-weight:400}
+h2{font-size:clamp(30px,7vw,62px);font-weight:400;line-height:1.1;margin:10px 0 22px}
+p{font-size:clamp(17px,3vw,22px);line-height:1.75;color:#eadfe4;margin:0 auto;max-width:650px}
+.name{color:#ffb4cc;font-style:italic}
+.btn{
+  margin:38px 8px 0;padding:15px 34px;border:1px solid rgba(255,255,255,.3);
+  border-radius:999px;background:rgba(255,255,255,.07);color:#fff;
+  font:600 14px Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;
+  cursor:pointer;transition:.25s;backdrop-filter:blur(8px)
+}
+.btn:hover{transform:translateY(-3px);background:rgba(255,255,255,.14)}
+.yes{background:#c93d68;border-color:#f38baa;box-shadow:0 0 30px rgba(201,61,104,.35)}
+.no{position:relative}
+.heart{font-size:54px;filter:drop-shadow(0 0 18px rgba(255,100,150,.55));margin-bottom:10px}
+.ring{font-size:72px;animation:ring 2s infinite}
+.small{font:12px Arial,sans-serif;letter-spacing:2px;color:#a99da4;margin-top:24px}
+@keyframes fade{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes ring{0%,100%{transform:scale(1) rotate(-5deg)}50%{transform:scale(1.08) rotate(5deg)}}
+@media(max-width:500px){.btn{width:calc(100% - 16px);margin-top:14px}.no{margin-top:8px}}
+</style>
+
+<style>
+#musicBtn{
+ position:fixed;right:18px;top:18px;z-index:20;width:46px;height:46px;border-radius:50%;
+ border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.08);color:#fff;
+ cursor:pointer;backdrop-filter:blur(8px);font-size:20px;box-shadow:0 0 20px rgba(255,120,160,.18)
+}
+</style>
+
+
+<style>
+.love-message{max-width:680px;font-size:clamp(15px,2.8vw,19px);line-height:1.65}
+.love-message strong{color:#ffb4cc;font-weight:400}
+.gallery{
+  display:grid;grid-template-columns:repeat(2,1fr);gap:10px;
+  max-width:620px;margin:28px auto 0;
+}
+.gallery img{
+  width:100%;height:180px;object-fit:cover;border-radius:14px;
+  border:1px solid rgba(255,255,255,.15);
+  box-shadow:0 8px 30px rgba(0,0,0,.35);
+  animation:photoIn .8s ease both;
+}
+.gallery img:nth-child(2){animation-delay:.1s}
+.gallery img:nth-child(3){animation-delay:.2s}
+.gallery img:nth-child(4){animation-delay:.3s}
+@keyframes photoIn{from{opacity:0;transform:scale(.94) translateY(12px)}to{opacity:1;transform:none}}
+@media(max-width:600px){
+ .gallery{gap:7px;margin-top:22px}
+ .gallery img{height:130px;border-radius:10px}
+ .love-message{font-size:15px}
+}
+</style>
+
+
+<style>
+#s4{max-width:820px;padding:34px 0 50px;overflow-y:auto;height:100vh;scrollbar-width:none}
+#s4::-webkit-scrollbar{display:none}
+.dream-list{display:grid;gap:10px;margin:30px auto 34px;max-width:700px;text-align:left}
+.dream{
+  display:grid;grid-template-columns:42px 1fr;column-gap:14px;
+  padding:16px 18px;border:1px solid rgba(255,255,255,.10);
+  border-radius:16px;background:linear-gradient(100deg,rgba(255,255,255,.055),rgba(255,255,255,.018));
+  backdrop-filter:blur(8px)
+}
+.dream span{grid-row:span 2;color:#d88aa5;font:11px Arial,sans-serif;letter-spacing:2px;padding-top:3px}
+.dream b{font-size:18px;font-weight:400;color:#fff}
+.dream small{font-size:14px;line-height:1.55;color:#bfb2ba;margin-top:5px}
+.final-note{
+  max-width:650px;margin:0 auto 34px;padding:30px 20px;
+  border-top:1px solid rgba(255,255,255,.13);
+  border-bottom:1px solid rgba(255,255,255,.13)
+}
+.final-note .heart{font-size:42px;margin:0 0 10px}
+.final-note p{font-size:18px;line-height:1.7}
+.only-us{margin-top:25px!important}
+.only-us strong{font-weight:400;color:#ffb4cc}
+.forever{margin-top:24px;color:#eab7c9;font:11px Arial,sans-serif;letter-spacing:5px}
+#s4 .gallery{margin-bottom:20px}
+@media(max-width:600px){
+ #s4{padding:28px 8px 45px}
+ .dream{padding:14px 13px}
+ .dream b{font-size:16px}
+ .dream small{font-size:13px}
+ .final-note p{font-size:16px}
+}
+</style>
+
+</head>
+<body>
+<canvas id="stars"></canvas><div class="overlay"></div>
+
+
+<audio id="bgMusic" loop preload="auto">
+  <source src="Santhatha Sakhiye_320(KoshalWorld.Com).mp3" type="audio/mpeg">
+</audio>
+<button id="musicBtn" aria-label="Toggle music">🎵</button>
+
+<main>
+  <section class="screen active" id="s1">
+    <div class="kicker">A little something for you</div>
+    <div class="heart">♥</div>
+    <h1>Krishnapriya<span class="name">...</span></h1>
+    <p>There is something I've been wanting to ask you.</p>
+    <button class="btn" onclick="next(2)">Open this ❤️</button>
+  </section>
+
+  <section class="screen" id="s2">
+    <div class="kicker">Just you & me</div>
+    <h2>Out of all the moments in my life,<br>meeting you is my favourite.</h2>
+    <p>You became someone I don't just want in my memories.<br>
+    I want you in every chapter that comes next.</p>
+    <button class="btn" onclick="next(3)">One more thing…</button>
+  </section>
+
+  <section class="screen" id="s3">
+    <div class="kicker">My question to you</div>
+    <div class="ring">💍</div>
+    <h2>Krishnapriya,<br><span class="name">will you be my wife?</span></h2>
+    <p>— Jenil ❤️</p>
+    <button class="btn yes" onclick="yes()">YES, JENIL ❤️</button>
+    <button class="btn no" id="no" onclick="moveNo()">NO 🙈</button>
+  </section>
+
+  <section class="screen" id="s4">
+  <div class="kicker">ഇനി നമ്മുടെ കഥ ❤️</div>
+  <h2>നമ്മൾ ഒരുമിച്ച്<br><span class="name">സ്വപ്നം കാണുന്ന ജീവിതം...</span></h2>
+
+  <div class="dream-list">
+    <div class="dream"><span>01</span><b>നമ്മുടെ ജീവിതം</b><small>എന്നും ഒരുമിച്ച്, എത്ര ദൂരം പോയാലും കൈവിടാതെ.</small></div>
+    <div class="dream"><span>02</span><b>ജർമ്മനി 🇩🇪</b><small>ഒരുമിച്ച് അവിടെ എത്തണം, നമ്മുടെ പുതിയ chapter തുടങ്ങണം.</small></div>
+    <div class="dream"><span>03</span><b>സ്വിറ്റ്സർലൻഡ് 🇨🇭</b><small>അവിടെ settle ആയി, നമ്മുടേതായ ഒരു ജീവിതം പണിയണം.</small></div>
+    <div class="dream"><span>04</span><b>ലോകം മുഴുവൻ 🌍</b><small>ഒരുമിച്ച് travel ചെയ്യണം, ഓരോ സ്ഥലത്തെയും ഓരോ ഭക്ഷണവും try ചെയ്യണം.</small></div>
+    <div class="dream"><span>05</span><b>നമ്മുടെ business 💼</b><small>ഒരുമിച്ച് ഒരുപാട് businesses build ചെയ്യണം, നമ്മുടെ dreams വളർത്തണം.</small></div>
+    <div class="dream"><span>06</span><b>മറ്റുള്ളവർക്കായി 🏠</b><small>വീടില്ലാത്തവർക്കും പാവപ്പെട്ടവർക്കും കഴിയുന്നത്ര വീടുകൾ പണിതുകൊടുക്കണം.</small></div>
+    <div class="dream"><span>07</span><b>നമ്മുടെ wedding 💍</b><small>ഒരു beautiful riverside-ൽ... നമ്മുടെ guests ആയി നമ്മൾ സ്നേഹിക്കുന്ന homeless കുട്ടികളോടൊപ്പം.</small></div>
+  </div>
+
+  <div class="final-note">
+    <div class="heart">♥</div>
+    <p>
+      ഇതെല്ലാം നടക്കുമോ എന്നറിയില്ല...<br>
+      പക്ഷേ ഇതെല്ലാം <span class="name">നിന്നോടൊപ്പം</span> സ്വപ്നം കാണാൻ എനിക്ക് ഇഷ്ടമാണ്.
+    </p>
+    <p class="only-us"><strong>അവൾക്ക് ഞാനും...<br>എനിക്ക് അവളും മാത്രം. ❤️</strong></p>
+    <div class="forever">FOREVER · ALWAYS</div>
+    <div class="small">LOVE, JENIL ❤️</div>
+  </div>
+
+  <div class="gallery">
+    <img src="memory1.jpg" alt="Our memory">
+    <img src="memory2.jpg" alt="Our memory">
+    <img src="memory3.jpg" alt="Our memory">
+    <img src="ring.jpg" alt="The ring">
+  </div>
+</section>
+</main>
+
+<script>
+const canvas=document.getElementById('stars'),ctx=canvas.getContext('2d');
+let w,h,stars=[];
+function resize(){
+  w=canvas.width=innerWidth*devicePixelRatio; h=canvas.height=innerHeight*devicePixelRatio;
+  canvas.style.width=innerWidth+'px';canvas.style.height=innerHeight+'px';
+  stars=Array.from({length:120},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.6+.3,a:Math.random(),s:Math.random()*.012+.003}));
+}
+addEventListener('resize',resize);resize();
+function draw(){
+  ctx.clearRect(0,0,w,h);
+  for(const s of stars){s.a+=s.s;if(s.a>1||s.a<.15)s.s*=-1;ctx.globalAlpha=s.a;ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fill()}
+  ctx.globalAlpha=1;requestAnimationFrame(draw);
+}draw();
+
+function next(n){
+  document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));
+  document.getElementById('s'+n).classList.add('active');
+}
+function moveNo(){
+  const b=document.getElementById('no');
+  const x=(Math.random()-.5)*180,y=(Math.random()-.5)*120;
+  b.style.transform=`translate(${x}px,${y}px)`;
+}
+function yes(){
+  next(4); window.scrollTo(0,0); celebrate();
+}
+function celebrate(){
+  for(let i=0;i<80;i++){
+    setTimeout(()=>{
+      const e=document.createElement('div');
+      e.textContent=['♥','❤','✨','💗'][Math.floor(Math.random()*4)];
+      e.style.cssText=`position:fixed;z-index:9;left:${Math.random()*100}vw;top:105vh;
+      font-size:${18+Math.random()*28}px;pointer-events:none;transition:transform 3s linear,opacity 3s linear`;
+      document.body.appendChild(e);
+      requestAnimationFrame(()=>{e.style.transform=`translateY(-${110+Math.random()*90}vh) rotate(${Math.random()*360}deg)`;e.style.opacity='0'});
+      setTimeout(()=>e.remove(),3200);
+    },i*35);
+  }
+}
+</script>
+
+<script>
+const music=document.getElementById('bgMusic'), musicBtn=document.getElementById('musicBtn');
+let musicStarted=false;
+async function startMusic(){
+  if(musicStarted) return;
+  try{ await music.play(); musicStarted=true; musicBtn.textContent='🔊'; }catch(e){}
+}
+document.addEventListener('click', startMusic, {once:false});
+musicBtn.addEventListener('click', async (e)=>{
+  e.stopPropagation();
+  if(music.paused){try{await music.play(); musicBtn.textContent='🔊';}catch(e){}}
+  else{music.pause();musicBtn.textContent='🔇';}
+});
+</script>
+
+</body>
+</html>
